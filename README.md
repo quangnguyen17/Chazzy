@@ -1,7 +1,7 @@
 # Chazzy!
 
-- Express (Server)
-- Platforms: iOS, Web (TBD), Android (TBD).
+- Express (Server-Side)
+- Platforms (Client-Side): iOS, Web (TBD), Android (TBD).
 
 ## To Learn More
 
