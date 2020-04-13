@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://localhost/chazzy_db", {
+  .connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
   })
-  .then((res) => console.log("Successfully connected to database. :)"))
-  .catch((err) =>
-    console.log("Failed to connect to database. Please try again! :(")
-  );
+  .then(() => console.log("Connected to DB."))
+  .catch((err) => console.log("Failed to connect to DB: ", err));

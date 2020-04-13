@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 
@@ -6,7 +8,7 @@ app.use(express.json(), express.urlencoded({ extended: true }));
 require("./config/mongoose.config");
 require("./routes/routes")(app);
 
-const PORT = 8000;
+const PORT = process.env.PORT;
 const server = app.listen(PORT, () =>
   console.log(`Server is up and listening on port ${PORT}`)
 );
